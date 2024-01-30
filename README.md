@@ -1,9 +1,11 @@
-# Synty Everything
+# Synty In Godot
 
-Tested on:
+Import your Synty asset packs from Unity to Godot.
 
-Unity: 2022.3.15f1
-Godot: 4.2
+#### Tested on
+
+- Unity: 2022.3.15f1
+- Godot: 4.2
 
 ## Polygon Fantasy Kingdom
 
@@ -18,7 +20,7 @@ Godot: 4.2
 - Create a new 3D Unity project (or load an existing suitable one)
 - Import `FBX Exporter` package from the standard Unity registry
 - Import `POLYGON Fantasy Kingdom` from the standard Unity registry
-- Copy this repository's `[PACK_NAME]/unity/Assets` directory to your Unity project
+- Copy the contents of this repository's `unity` and `[PACK_NAME]/unity` directory to your Unity project
 - In Unity, open the `PolygonFantasyKingdom - Everything` scene
 - If you zoom out enough you will see the mess of every static asset in the pack
 - Right-click the `PolygonFantasyKingdom` node and choose `Export to FBX...`
