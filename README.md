@@ -16,6 +16,7 @@ Import your Synty asset packs from Unity to Godot.
 
 Import Synty packs by following this process. The name of the Synty pack is your `[PACK_NAME]` (e.g. `PolygonFantasyKingdom`)
 
+1. Chec
 - Check pack-specific setup instructions below. Apply them as needed
 - Create a new 3D Unity project (or load an existing suitable one)
 - Import `FBX Exporter` package from the standard Unity registry
@@ -74,6 +75,10 @@ The characters must be imported one by one in order to get skeleton retargeting 
 
 After you've done this for each character, you can safely delete the FBX file and the uuid textures.
 
+### Afterward
+
+- Consider compressing your new Godot-ready pack directory into a zip or similar. Then, to bring these assets into a new project you only need to unpack the zip, instead of going through the whole import procedure again.
+
 # Per-Pack Setup
 
 Perform these manual steps for your pack *before* executing the full instructions.
@@ -89,6 +94,16 @@ If you have ffmpeg, try `ffmpeg -i src.tif dest.png`
 Open material `Misc/Dungeons_Texture_Ghost`. Notice that the albedo texture is a .tif. Change it to the new .png version.
 
 Do the same for the 4 main dungeon materials, for the metallic texture.
+
+### Polygon Dungeon Realms
+
+- Similar to Polygon Dungeon with the `Misc/Dungeons_Realms_Metallic.tif` file. Convert it to a png and update all materials that use it. This will be all of the main and alternate materials.
+
+- Copy the `Misc/Spiderweb_01.png` teture to `Misc/Spiderweb_01_25.png`. You now have 2 spiderweb textures. Enjoy.
+
+### Polygon Dungeon Map
+
+Copy the `Dungeons_Texture_01.png` from the Dungeons pack to this pack's textures directory.
 
 # Preparing the Unity Scenes
 
@@ -109,3 +124,8 @@ Do the same for the 4 main dungeon materials, for the metallic texture.
 - Search the scene tree for "Wheel"
     - Object names that **end** in "Wheel" or "Wheel_##" need to be changed to "Whiil" or "Whiil_##"
     - This prevents Godot from turning these into wheel physics objects
+
+### Character Scenes
+
+- Delete each unnecessary character mesh from each character
+- If any characters have attachments choose which character should have those attachments, enable the attachment meshes, and delete the unused meshes
